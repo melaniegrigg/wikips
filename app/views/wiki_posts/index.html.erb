@@ -1,6 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Wiki Posts</h1>
+<h1>Wiki</h1>
+
+<div>
+    <% @posts.each do |post| %>
+        <p>
+            <h4><%= post.title %></h4>
+            <%= link_to "View", wiki_post_path(post), class: 'wikiLink' %>
+        </p>
+     <% end %>
+</div>
 
 # <div id="wiki_posts">
 #   <% @wiki_posts.each do |wiki_post| %>
